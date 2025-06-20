@@ -2,7 +2,7 @@
 
 export const getDatoCmsToken = (): string => {
   const hostname = window.location.hostname;
-
+const defaultToken = "8ddfa684505af65a7a6e30a2e35e76";
   switch (hostname) {
     case 'ror.sumanthsamala.com':
     case 'sumanthsamala.com':
