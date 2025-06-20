@@ -22,6 +22,11 @@ export const getDatoCmsToken = (): string => {
     case 'node.localhost':
       return process.env.REACT_APP_DATOCMS_NODE_TOKEN ?? '';
 
+    case 'himanshup012.onrender.com':  // Add this line for your Render hostname
+      const renderToken = process.env.REACT_APP_DATOCMS_RENDER_TOKEN ?? defaultToken;
+      console.log("Using Render Token:", renderToken);
+      return renderToken;  // Return the correct token
+
     default:
       throw new Error(`No DatoCMS token configured for hostname: ${hostname}`);
   }
